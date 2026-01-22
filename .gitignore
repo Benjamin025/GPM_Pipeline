@@ -5,3 +5,7 @@
 /GPM_MOnthly_NASA
 
 GPM_NASA_Daily
+
+/gpm_airflow/.env
+/gpm_airflow/.config
+/gpm_airflow/data
