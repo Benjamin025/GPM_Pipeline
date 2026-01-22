@@ -1,0 +1,26 @@
+{
+    "name": "GPM Airflow Pipeline",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "airflow-webserver",
+    "workspaceFolder": "/opt/airflow",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode.vscode-docker",
+        "redhat.vscode-yaml",
+        "eamodio.gitlens"
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+        "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "files.autoSave": "afterDelay"
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "airflow"
+}

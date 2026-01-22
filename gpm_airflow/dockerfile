@@ -1,0 +1,31 @@
+FROM apache/airflow:2.7.3-python3.9
+
+USER root
+
+# Install system dependencies for GPM processing
+RUN apt-get update && apt-get install -y \
+    wget \
+    curl \
+    git \
+    nano \
+    vim \
+    gdal-bin \
+    libgdal-dev \
+    libhdf5-dev \
+    libnetcdf-dev \
+    python3-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+USER airflow
+
+# Install Python packages for GPM
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt \
+    && pip install --no-cache-dir \
+    ipython \
+    jupyter \
+    jupyterlab \
+    notebook
+
+WORKDIR /opt/airflow
