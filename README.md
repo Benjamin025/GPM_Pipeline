@@ -163,8 +163,9 @@ Encountering problems? Please check:
 
 ## 📧 Contact
 
-**Benjamin Musembi**  
-GitHub: [@Benjamin025](https://github.com/Benjamin025)
+**Benjamin Karanja**  
+- GitHub: [@Benjamin025](https://github.com/Benjamin025)
+- Email: ndungubenjamin025@gmail.com
 
 ---
 
