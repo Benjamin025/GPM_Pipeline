@@ -46,7 +46,7 @@ class GPMConfig:
         self.MAX_PIXELS = 1e9
         
         # Output directories
-        self.OUTPUT_BASE = './gpm_netcdf_output'
+        self.OUTPUT_BASE = './gpm_gee'
         self.CSV_DIR = os.path.join(self.OUTPUT_BASE, 'csv')
         self.NETCDF_DIR = os.path.join(self.OUTPUT_BASE, 'netcdf')
         self.RASTER_DIR = os.path.join(self.OUTPUT_BASE, 'raster')
