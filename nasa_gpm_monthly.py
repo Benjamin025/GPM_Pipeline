@@ -1,6 +1,6 @@
 """
 NASA GPM COMPLETE WORKFLOW: DOWNLOAD + PROCESSING PIPELINE
-Downloads GPM data (1998-2025) and processes to monthly GeoTIFFs
+Downloads GPM data (1998-2027) and processes to monthly GeoTIFFs
 """
 
 import os
@@ -268,7 +268,7 @@ class GPMCompleteWorkflow:
         print(f"  ❌ Failed after {max_retries} attempts")
         return None
     
-    def download_year_range(self, start_year=1998, end_year=2025):
+    def download_year_range(self, start_year=1998, end_year=2027):
         """Download all files for a range of years"""
         
         print(f"\n📥 DOWNLOADING: {start_year} to {end_year}")
@@ -613,7 +613,7 @@ class GPMCompleteWorkflow:
         except Exception as e:
             print(f"    ⚠️ Metadata error: {e}")
     
-    def process_all_files(self, start_year=1998, end_year=2025, create_previews=True):
+    def process_all_files(self, start_year=1998, end_year=2027, create_previews=True):
         """Process all downloaded files"""
         
         print(f"\n🔄 PROCESSING ALL FILES: {start_year} to {end_year}")
@@ -693,7 +693,7 @@ class GPMCompleteWorkflow:
     # COMPLETE WORKFLOW
     # =========================================================================
     
-    def run_complete_workflow(self, start_year=1998, end_year=2025, skip_download=False):
+    def run_complete_workflow(self, start_year=1998, end_year=2027, skip_download=False):
         """Run complete workflow: download and process"""
         
         print("\n" + "="*70)
@@ -758,7 +758,7 @@ def main():
     print("\n" + "="*70)
     print("🌧️ NASA GPM COMPLETE WORKFLOW MANAGER")
     print("="*70)
-    print("Downloads GPM data (1998-2025) and processes to monthly GeoTIFFs")
+    print("Downloads GPM data (1998-2027) and processes to monthly GeoTIFFs")
     print("="*70)
     
     # Create workflow instance
@@ -767,7 +767,7 @@ def main():
     while True:
         print("\n📋 MAIN MENU:")
         print("1. Run complete workflow (download + process)")
-        print("2. Download only (1998-2025)")
+        print("2. Download only (1998-2027)")
         print("3. Process only (using existing downloads)")
         print("4. Check directory structure")
         print("5. Test authentication")
@@ -782,8 +782,8 @@ def main():
             start_year = input("Start year [default: 1998]: ").strip()
             start_year = int(start_year) if start_year.isdigit() else 1998
             
-            end_year = input("End year [default: 2025]: ").strip()
-            end_year = int(end_year) if end_year.isdigit() else 2025
+            end_year = input("End year [default: 2027]: ").strip()
+            end_year = int(end_year) if end_year.isdigit() else 2027
             
             # Confirm for large downloads
             total_months = (end_year - start_year + 1) * 12
@@ -803,8 +803,8 @@ def main():
             start_year = input("Start year [default: 1998]: ").strip()
             start_year = int(start_year) if start_year.isdigit() else 1998
             
-            end_year = input("End year [default: 2025]: ").strip()
-            end_year = int(end_year) if end_year.isdigit() else 2025
+            end_year = input("End year [default: 2027]: ").strip()
+            end_year = int(end_year) if end_year.isdigit() else 2027
             
             workflow.download_year_range(start_year, end_year)
         
@@ -815,8 +815,8 @@ def main():
             start_year = input("Start year [default: 1998]: ").strip()
             start_year = int(start_year) if start_year.isdigit() else 1998
             
-            end_year = input("End year [default: 2025]: ").strip()
-            end_year = int(end_year) if end_year.isdigit() else 2025
+            end_year = input("End year [default: 2027]: ").strip()
+            end_year = int(end_year) if end_year.isdigit() else 2027
             
             create_previews = input("Create preview images? (y/n) [default: y]: ").strip().lower()
             create_previews = create_previews != 'n'
@@ -895,7 +895,7 @@ if __name__ == "__main__":
     
     # Run the workflow
     print("\nSelect execution mode:")
-    print("1. Complete workflow (1998-2025)")
+    print("1. Complete workflow (1998-2027)")
     print("2. Quick start (test with 2009-2010)")
     print("3. Interactive menu")
     
@@ -903,7 +903,7 @@ if __name__ == "__main__":
     
     if mode == '1':
         workflow = GPMCompleteWorkflow()
-        workflow.run_complete_workflow(start_year=1998, end_year=2025)
+        workflow.run_complete_workflow(start_year=1998, end_year=2027)
     elif mode == '2':
         quick_start()
     elif mode == '3':
