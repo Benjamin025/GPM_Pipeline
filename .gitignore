@@ -2,18 +2,9 @@
 
 /__pycache__
 
-/GPM_MOnthly_NASA
-
-GPM_NASA_Daily
-
 /gpm_airflow/.env
 /gpm_airflow/.config
 /gpm_airflow/data
-
-/GPM_NASA_HalfHourly_1999_2026
-
 /data
 
-/GPM_NASA_Daily_corrected
 
-/GPM_NASA
