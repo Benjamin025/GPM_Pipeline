@@ -6,5 +6,6 @@
 /gpm_airflow/.config
 /gpm_airflow/data
 /data
-GPM_NASA_HalfHourly_1999_2026/raw_halfhourly/2026
+
+GPM_NASA_HalfHourly_1999_2026
 
